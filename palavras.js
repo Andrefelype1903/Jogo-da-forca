@@ -1,0 +1,1 @@
+let palavras = [["TELEVISAO","ELETRODOMESTICO"],["PEIXE","TEM NO MAR"],["CARRO","VEICULO"],["AVIAO","VOA"]]

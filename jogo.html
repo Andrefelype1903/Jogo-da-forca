@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Jogo da forca</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+
+        <header>
+            <p>Jogo da</p>
+            <img src="imagens/jogo.png">
+            <p>Forca</p>
+        </header>
+
+        <main class="main-jogo">
+            <div class="btn-comecar" id="div-começar">
+                <button class="comecar" onclick="iniciaJogo()" >Começar</button>
+            </div>
+
+            <div class="dicas">
+                <p id="dica"></p>
+            </div>
+
+            <canvas id="forca" height="860px" width="980px"></canvas>
+
+            <div class="perdeu-ganhou">
+                <div class="conteudo-perdeu" id="id-perdeu">
+                    <p>Fim de jogo</p>
+                    <p>Que pena, Você não conseguiu completar a palavra</p>
+                    <p id="mostra-palavra"></p>
+                    <button id="botao-restart" onclick="reiniciar()">Tentar novamente</button>
+                </div>
+                <div class="conteudo-ganhou" id="id-ganhou">
+                    <p>Meus parabens</p>
+                    <p>Você completou a palavra</p>
+                    <button id="recomecar" onclick="reiniciar()">Jogar de novo</button>
+                </div>
+            </div>
+
+          
+            
+        </main>
+
+
+        <footer class="footer-jogo">
+
+            <p> Desenvolvido por André Felype - 2022</p>
+            <p>Copyrigth &copy; todos os direitos reservados.</p>
+            <p><a href="http://github.com/Andrefelype1903"><img src=imagens/github.png></a>
+                <a href="http://www.linkedin.com/in/andre-felype-ferreira-da-silva-56835a246/"><img src=imagens/likedin.png></a>
+            </p>
+
+
+        </footer>
+
+        <script type="text/javascript" src="forca.js"></script>
+        <script type="text/javascript" src="canvas.js"></script>
+        <script type="text/javascript" src="palavras.js"></script>
+    </body>
+
+
+</html>
