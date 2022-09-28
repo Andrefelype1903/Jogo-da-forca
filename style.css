@@ -157,6 +157,34 @@ header img {
 
 }
 
+.teclado {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    top: -115px;
+    align-items: center;
+    margin: 1px;
+
+}
+
+.linha-1, .linha-2, .linha-3 {
+    margin: 3px;
+}
+
+.teclado button {
+    font-size: 18px;
+    width: 40px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0 3px;
+    border-radius: 10px;
+}
+
+.botao-teclado:hover {
+   background: red;
+   transform: scale(1.2);
+}
+
 .perdeu-ganhou {
     position: fixed;
     text-align: center;

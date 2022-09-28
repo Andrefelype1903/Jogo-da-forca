@@ -7,6 +7,8 @@ let letras = [];
 let erros = 6;
 let acertos = 0
 
+let teclado = document.getElementsByClassName("botao-teclado")
+let tecla = teclado.value
 
 function escolherPalavraSecreta() {
     let palavra = palavras[Math.floor(Math.random() * palavras.length)];
@@ -58,6 +60,7 @@ function iniciaJogo() {
     desenhaLinhas();
     escreveErro();
     mostraDica();
+    document.getElementById("teclado-virtual").style.display = "flex"
    
 
     document.onkeydown = (e) => {
@@ -116,4 +119,8 @@ function ganharJogo() {
         document.getElementById("id-ganhou").style.display = "flex"
     }
    
+}
+
+function clicaLetraQ(e) {
+    console.log("clicou")
 }
