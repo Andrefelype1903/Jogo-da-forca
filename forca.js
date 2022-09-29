@@ -10,6 +10,8 @@ let acertos = 0
 let teclas = document.getElementsByClassName("botao-teclado")
 
 
+
+
 function escolherPalavraSecreta() {
     let palavra = palavras[Math.floor(Math.random() * palavras.length)];
     palavraSecreta = palavra[0];
@@ -86,6 +88,7 @@ function adicionaAcertos() {
 
 function iniciaJogo() {
     document.getElementById("div-começar").style.display = "none";
+    document.getElementById("caixa-add-palavra").style.display = "none"
     escolherPalavraSecreta();
     desenhaCanvas();
     desenhaLinhas();
@@ -210,6 +213,18 @@ function limpaTeclas() {
     document.getElementById("N").style.background = "white"
     document.getElementById("M").style.background = "white"
     
+}
+
+function caixaNovaPalavra() {
+    document.getElementById("caixa-add-palavra").style.display ="flex"
+    document.getElementById("add-palavra-jogo").style.display = "none"
+}
+
+function adicionarNovaPalavra() {
+    let novaPalavra = document.getElementById("nova-palavra").value.toUpperCase()
+    let novaDica = document.getElementById("nova-dica").value.toUpperCase()
+    palavras.push([novaPalavra,novaDica]);
+    novaPalavra.value = ""
 }
 
 /*

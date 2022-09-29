@@ -20,20 +20,6 @@
     margin: 0 0 200px;
 }
 
-.botao-inicial {
-    margin: 10px;
-    font-size: 25px;
-    background: wheat;
-    padding: 10px 80px;
-    border-radius: 20px;
-    transition: 1s all;
-}
-
-.botao-inicial:hover {
-    background: darkorange;
-	transform: scale(1.2);
-}
-
 footer {
     display: flex;
     padding: 10px;
@@ -85,12 +71,27 @@ header img {
     background: linear-gradient(lightblue,lightgreen);
 }
 
-.btn-comecar {
+#div-começar {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     top: 150px
+}
+
+.botao-add-palavra {
+    margin: 10px;
+    font-size: 25px;
+    background: "none";
+    padding: 10px 80px;
+    border-style: "none";
+    border-radius: 20px;
+    transition: 1s all;
+}
+
+.botao-add-palavra:hover {
+    background: darkorange;
+	transform: scale(1.2);
 }
 
 .comecar {
@@ -264,6 +265,42 @@ header img {
     cursor: pointer;
 }
 
+#caixa-add-palavra {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: -500px;
+    width: 50%;
+    margin: 0 auto
+}
+
+.aviso-add {
+    display: block;
+}
+
+.div-aviso {
+    display: block;
+}
+
+#caixa-add-palavra p {
+    display: inline;
+    margin: 1px 3px 0 0;
+}
+
+
+#caixa-add-palavra img {
+    display: inline;
+    margin: 1px;
+}
+
+#caixa-add-palavra input {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 20px
+}
 
 .footer-jogo {
     display: flex;
@@ -287,7 +324,7 @@ footer img {
 
 .add-palavra {
     width: 40%;
-    height: 400px;
+    height: 40px;
 }
 
 .btn-add {
