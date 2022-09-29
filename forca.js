@@ -7,8 +7,6 @@ let letras = [];
 let erros = 6;
 let acertos = 0
 
-let teclado = document.getElementsByClassName("botao-teclado")
-let tecla = teclado.value
 
 function escolherPalavraSecreta() {
     let palavra = palavras[Math.floor(Math.random() * palavras.length)];
@@ -24,19 +22,48 @@ function mostraDica() {
 
 function verificarLetra(key) {
     let estado = false;
-    if(key >= 65 && letras.indexOf(key) || key <= 90 && letras.indexOf(key)) {
-        letras.push(key)
-        console.log(key)
-        //console.log(letras)
-        return estado
+    /*if(key >= 65 && letras.indexOf(key) || key <= 90 && letras.indexOf(key)) {
+        console.log("oi")
+       
+
     } else {
+        
         estado = true;
         letras.push(key)
-       // console.log(key)
-        //console.log(letras , "if true")
+        //console.log(key)
+        console.log(letras , "if true")
         return estado
+    }*/
+    if(!letras.includes(key)) {
+        letras.push(key)
+        console.log(key)
+        console.log(letras)
+        return estado
+        
     }
-    
+}
+
+function verificaLetraClicada(letra) {
+    if(!letras.includes(letra)) {
+        letras.push(letra)
+        if(palavraSecreta.includes(letra)) {
+            for(let i = 0; i < palavraSecreta.length; i++) {
+                if(palavraSecreta[i] === letra) {
+
+                    escreverLetraCorreta(i);
+                    adicionaAcertos();
+                    ganharJogo()
+                }
+            }
+        } else {
+            adicionarLetraIncorreta(letra);
+            escreverLetraIncorreta(letra, erros);
+            DesenhaErro();
+            
+        }
+        console.log(letras)
+    }
+
 }
 
 function adicionarLetraIncorreta() {
@@ -46,7 +73,7 @@ function adicionarLetraIncorreta() {
 
 function adicionaAcertos() {
     acertos++
-    console.log(acertos)
+    //console.log(acertos)
 }
 
 
@@ -65,22 +92,29 @@ function iniciaJogo() {
 
     document.onkeydown = (e) => {
         let letra = e.key.toUpperCase()
+        verificaLetraClicada(letra)
+        /*if(!letras.includes(letra)) {
+            letras.push(letra)
+            if(palavraSecreta.includes(letra)) {
+                for(let i = 0; i < palavraSecreta.length; i++) {
+                    if(palavraSecreta[i] === letra) {
 
-        if(verificarLetra(letra) && palavraSecreta.includes(letra)) {
-            for(let i = 0; i < palavraSecreta.length; i++) {
-                if(palavraSecreta[i] === letra) {
-                    escreverLetraCorreta(i);
-                    adicionaAcertos();
-                    ganharJogo()
+                        escreverLetraCorreta(i);
+                        adicionaAcertos();
+                        ganharJogo()
+                    }
                 }
+            } else {
+                adicionarLetraIncorreta(letra);
+                escreverLetraIncorreta(letra, erros);
+                DesenhaErro();
+                
             }
-        } else {
-            adicionarLetraIncorreta(letra);
-            escreverLetraIncorreta(letra, erros);
-            DesenhaErro();
+            console.log(letras)
         }
-
+    */
     }
+    
 }
 
 function DesenhaErro() {
@@ -105,8 +139,8 @@ function DesenhaErro() {
 
 function reiniciar() {
     limpaTela();
-    document.getElementById("id-perdeu").style.display = "none"
-    document.getElementById("id-ganhou").style.display = "none"
+    document.getElementById("caixa-perdeuganhou").style.display = "none"
+    
 
     iniciaJogo();
     erros = 6
@@ -117,10 +151,20 @@ function reiniciar() {
 function ganharJogo() {
     if(acertos == palavraSecreta.length) {
         document.getElementById("id-ganhou").style.display = "flex"
+        document.getElementById("caixa-perdeuganhou").style.display = "flex"
+        letras = []
     }
    
 }
 
-function clicaLetraQ(e) {
-    console.log("clicou")
+function clicaLetra(e) {
+    let tecla = e
+    console.log(tecla)
+    verificaLetraClicada(tecla)
+    
 }
+
+/*
+let teclado = document.querySelector(".botao-teclado")
+
+teclado.addEventListener("click" , clicaLetra)*/

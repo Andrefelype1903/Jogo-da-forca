@@ -180,7 +180,7 @@ header img {
     border-radius: 10px;
 }
 
-.botao-teclado:hover {
+.teclado button:hover {
    background: red;
    transform: scale(1.2);
 }
@@ -188,7 +188,7 @@ header img {
 .perdeu-ganhou {
     position: fixed;
     text-align: center;
-    display: flex;
+    display: none;
     justify-content: space-around;
     width: 100%;
     height: 100%;
@@ -281,6 +281,24 @@ footer p {
 footer img {
     width: 30px;
     margin: 0 5px;
+}
+
+/*CSS da pagina de adicionar palavra*/
+
+.add-palavra {
+    width: 40%;
+    height: 400px;
+}
+
+.btn-add {
+    margin: 20px;
+    width: 20%;
+    background: bisque;
+    border-radius: 10px
+}
+
+.btn-add:hover {
+    transform: scale(1.2);
 }
 
 /*CSS para celular*/
