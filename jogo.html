@@ -20,7 +20,7 @@
         <main class="main-jogo">
             <div class="btn-comecar" id="div-começar">
                 <button class="comecar" onclick="iniciaJogo()" >Começar</button>
-                <button class="botao-add-palavra" id="add-palavra-jogo" onclick="caixaNovaPalavra()">Adicionar palavra</button>
+                <button class="comecar" id="add-palavra-jogo" onclick="caixaNovaPalavra()">Adicionar mais palavras</button>
             </div>
 
             <div class="dicas">
@@ -84,13 +84,13 @@
 
                 <div class="aviso-add">
                     <div class="div-aviso"><img src="imagens/Vector!.png"><p>Insira quantas palavras quiser!</p></div>
-                    <div class="div-aviso"><img src="imagens/Vector!.png"><p>Não ultilize simbolos ou acentos</p></div>
-                    <div class="div-aviso"><img src="imagens/Vector!.png"><p>É necessario colocar uma dica para a palvra</p></div>
+                    <div class="div-aviso"><img src="imagens/Vector!.png"><p>Não ultilize simbolos ou acentos!</p></div>
+                    <div class="div-aviso"><img src="imagens/Vector!.png"><p>É necessario colocar uma dica para a palvra!</p></div>
                 </div>
                 
                 <input type="text" id="nova-palavra" class="add-palavra" placeholder="Insira uma nova palavra">
                 <input type="text" id="nova-dica" class="add-palavra" placeholder="Insira a dica">
-                <input type="submit" class="btn-add" onclick="adicionarNovaPalavra()">
+                <button class="btn-add" onclick="adicionarNovaPalavra()">Salvar palavra</button>
             </div>
           
             

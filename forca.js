@@ -218,13 +218,16 @@ function limpaTeclas() {
 function caixaNovaPalavra() {
     document.getElementById("caixa-add-palavra").style.display ="flex"
     document.getElementById("add-palavra-jogo").style.display = "none"
+    document.getElementById("nova-palavra").focus()
 }
 
 function adicionarNovaPalavra() {
     let novaPalavra = document.getElementById("nova-palavra").value.toUpperCase()
     let novaDica = document.getElementById("nova-dica").value.toUpperCase()
     palavras.push([novaPalavra,novaDica]);
-    novaPalavra.value = ""
+    document.getElementById("nova-palavra").value = ""
+    document.getElementById("nova-dica").value = ""
+    document.getElementById("nova-palavra").focus()
 }
 
 /*
