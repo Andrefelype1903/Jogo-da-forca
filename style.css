@@ -181,7 +181,7 @@ header img {
 }
 
 .teclado button:hover {
-   background: red;
+   background: lightsalmon;
    transform: scale(1.2);
 }
 

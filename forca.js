@@ -7,6 +7,8 @@ let letras = [];
 let erros = 6;
 let acertos = 0
 
+let teclas = document.getElementsByClassName("botao-teclado")
+
 
 function escolherPalavraSecreta() {
     let palavra = palavras[Math.floor(Math.random() * palavras.length)];
@@ -49,14 +51,15 @@ function verificaLetraClicada(letra) {
         if(palavraSecreta.includes(letra)) {
             for(let i = 0; i < palavraSecreta.length; i++) {
                 if(palavraSecreta[i] === letra) {
-
                     escreverLetraCorreta(i);
+                    document.getElementById(letra).style.background = "green"
                     adicionaAcertos();
-                    ganharJogo()
+                    ganharJogo();
                 }
             }
         } else {
             adicionarLetraIncorreta();
+            document.getElementById(letra).style.background = "red"
             escreverLetraIncorreta(letra, erros);
             DesenhaErro();
             perderJogo()
@@ -88,7 +91,8 @@ function iniciaJogo() {
     desenhaLinhas();
     escreveErro();
     mostraDica();
-    document.getElementById("teclado-virtual").style.display = "flex"
+    document.getElementById("teclado-virtual").style.display = "flex";
+    
    
 
     document.onkeydown = (e) => {
@@ -139,8 +143,10 @@ function DesenhaErro() {
 }
 
 function reiniciar() {
+    
     limpaTela();
     document.getElementById("caixa-perdeuganhou").style.display = "none"
+    limpaTeclas()
     
 
     iniciaJogo();
@@ -172,6 +178,37 @@ function clicaLetra(e) {
     let tecla = e
     console.log(tecla)
     verificaLetraClicada(tecla)
+    
+}
+
+function limpaTeclas() {
+    document.getElementById("Q").style.background = "white"
+    document.getElementById("W").style.background = "white"
+    document.getElementById("E").style.background = "white"
+    document.getElementById("R").style.background = "white"
+    document.getElementById("T").style.background = "white"
+    document.getElementById("Y").style.background = "white"
+    document.getElementById("U").style.background = "white"
+    document.getElementById("I").style.background = "white"
+    document.getElementById("O").style.background = "white"
+    document.getElementById("P").style.background = "white"
+    document.getElementById("A").style.background = "white"
+    document.getElementById("S").style.background = "white"
+    document.getElementById("D").style.background = "white"
+    document.getElementById("F").style.background = "white"
+    document.getElementById("G").style.background = "white"
+    document.getElementById("H").style.background = "white"
+    document.getElementById("J").style.background = "white"
+    document.getElementById("K").style.background = "white"
+    document.getElementById("L").style.background = "white"
+    document.getElementById("Ç").style.background = "white"
+    document.getElementById("Z").style.background = "white"
+    document.getElementById("X").style.background = "white"
+    document.getElementById("C").style.background = "white"
+    document.getElementById("V").style.background = "white"
+    document.getElementById("B").style.background = "white"
+    document.getElementById("N").style.background = "white"
+    document.getElementById("M").style.background = "white"
     
 }
 
