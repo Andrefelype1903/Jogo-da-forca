@@ -56,9 +56,10 @@ function verificaLetraClicada(letra) {
                 }
             }
         } else {
-            adicionarLetraIncorreta(letra);
+            adicionarLetraIncorreta();
             escreverLetraIncorreta(letra, erros);
             DesenhaErro();
+            perderJogo()
             
         }
         console.log(letras)
@@ -149,13 +150,23 @@ function reiniciar() {
 }
 
 function ganharJogo() {
-    if(acertos == palavraSecreta.length) {
+    if(acertos == palavraSecreta.length ) {
         document.getElementById("id-ganhou").style.display = "flex"
+        document.getElementById("id-perdeu").style.display = "none"
         document.getElementById("caixa-perdeuganhou").style.display = "flex"
         letras = []
-    }
-   
+    } 
 }
+
+function perderJogo() {
+    if(erros == 0 ) {
+        document.getElementById("id-perdeu").style.display = "flex"
+        document.getElementById("id-ganhou").style.display = "none"
+        document.getElementById("caixa-perdeuganhou").style.display = "flex"
+        letras = []
+    } 
+}
+
 
 function clicaLetra(e) {
     let tecla = e
