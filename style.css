@@ -357,7 +357,7 @@ footer img {
 
 /*CSS para celular*/
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
 
 
     .main-inicio {
@@ -373,9 +373,6 @@ footer img {
         top: -42px
     }
 
-    .linha-1, .linha-2, .linha-3, .div-aviso {
-        width: 90%;
-    }
 
     .comecar {
         width: 80%;
