@@ -380,7 +380,7 @@ footer img {
     .comecar {
         width: 80%;
         font-size: 100%;
-        top: -130px
+        top: 5px
     }
 
     .main-jogo {
@@ -402,7 +402,7 @@ footer img {
         margin: 10px auto;
     }
     #caixa-add-palavra {
-        top: -286px;
+        top: -172px;
     }
 
     .conteudo-perdeu, .conteudo-ganhou {
