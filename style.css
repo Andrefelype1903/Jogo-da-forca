@@ -357,31 +357,66 @@ footer img {
 
 /*CSS para celular*/
 
-/*@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
 
-    
-    .botao-inicial {
-        font-size: 15px;
+
+    .main-inicio {
+        height: 300px;
+    }
+    .footer-index {
+        margin-top: 100px;
     }
 
-
-    header img {
-        width:50px;
-    }
-
-    .main-inicio{
+    #forca, .teclado  {
         width: 100%;
-        height: 55px;
-        margin: 0 0 450px;
+        text-align: center;
+        top: -42px
     }
 
-    .main-jogo {
-        width: 100%;
-        height: 700px;
+    .linha-1, .linha-2, .linha-3, .div-aviso {
+        width: 90%;
     }
 
     .comecar {
-        width: 170px;
+        width: 80%;
+        font-size: 100%;
+        top: -130px
     }
+
+    .main-jogo {
+        height: 600px;
+    }
+
+    .teclado button {
+        width: 26px;
+        padding: initial;
+        font-size: 22px;
+        margin: 2px;
+    }
+
+    .dicas {
+        top: 55px;
+    }
+
+    .div-aviso {
+        margin: 10px auto;
+    }
+    #caixa-add-palavra {
+        top: -286px;
+    }
+
+    .conteudo-perdeu, .conteudo-ganhou {
+        width: 80%;
+        position: absolute;
+        left: -3px;
+        top: 405px;
+        background: lightblue;
+
+    }
+
+    .conteudo-perdeu button, .conteudo-ganhou button {
+        width: 50%;
+    }
+
 }
-*/
+    
