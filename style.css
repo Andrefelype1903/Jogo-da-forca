@@ -360,6 +360,10 @@ footer img {
 @media screen and (max-width: 580px) {
 
 
+    body {
+        height: 100mv;
+    }
+
     .main-inicio {
         height: 300px;
     }

@@ -1,0 +1,16 @@
+{
+    "name": "Jogo da forca",
+    "short_name": "Jogo da forca",
+    "icons": [
+        {
+            "src": "../imagens/icone_mobile.png",
+            "sizes": "192x192"
+        }
+    ],
+
+    "start_url": "../index.html",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "backgroud_color": "#ffffff"
+
+}
