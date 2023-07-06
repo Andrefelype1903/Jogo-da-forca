@@ -3,7 +3,7 @@
     "short_name": "Jogo da forca",
     "icons": [
         {
-            "src": "../imagens/icone_mobile.png",
+            "src": "./imagens/icone_mobile.png",
             "sizes": "192x192"
         }
     ],
