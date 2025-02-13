@@ -195,6 +195,7 @@ header img {
     padding: 10px;
     margin: 0 3px;
     border-radius: 10px;
+    border: 2px solid #000;
 }
 
 .teclado button:hover {
